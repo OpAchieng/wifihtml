@@ -1,159 +1,171 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http="X-UA-compatiable" content="IE=edge">
-    <meta name="viewport" contenet="width=device-width," initial-scale="1.0">
-    <title>SWIFTEL.FIBRE</title>
-    <link rel="stylesheet"href="style.css">
-    <head></head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SWIFTEL.FIBRE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <body>
-        <section id="header">
-            <a href="#"><img src="logo.png" class="logo" alt=""></a>
-            <div>
-                <ul id="navbar">
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                
-
-
-            </div>
-        </section>   
-        <section id="hero">
-          <h4>open oppotunity</h4>
-          <h2>Unlimited,high speed internet from 1500</h2>
-          <p>unlinited data</p>
-          <button>Get internet today</button>
-         </section>    
-        
-        <section id="home-packages">
-  <h2>Home WiFi Packages</h2>
-  <p>swiftel fibre wifi-packages</p>
-  <div class="package-container">
-    
-    <div class="package-card">
-      <img src="5mbps.jpg" alt="5Mbps Package">
-      <button class="buy-1">Buy Now</button>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <a href="#"><img src="logo.png" class="logo" alt="Swiftel Logo" /></a>
+    <div>
+      <ul id="navbar">
+        <li><a class="active" href="#" onclick="loadPage('home')">Home</a></li>
+        <li><a href="#" onclick="loadPage('about')">About</a></li>
+        <li><a href="#" onclick="loadPage('blog')">Blog</a></li>
+        <li><a href="#" onclick="loadPage('shop')">Shop</a></li>
+        <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+      </ul>
     </div>
+  </section>
 
-    <div class="package-card">
-      <img src="13mbps.jpg" alt="13Mbps Package">
-      <button class="buy-2">Buy Now</button>
-    </div>
+  <!-- Home static content (ONLY for home) -->
+  <div id="home-content">
+    <section id="hero">
+      <h4>Open Opportunity</h4>
+      <h2>Unlimited, high speed internet from 1500</h2>
+      <p>Unlimited data</p>
+      <button>Get internet today</button>
+    </section>
 
-    <div class="package-card">
-      <img src="23mbps.jpg" alt="23Mbps Package">
-      <button class="buy-3">Buy Now</button>
-    </div>
+    <section id="home-packages">
+      <h2>Home WiFi Packages</h2>
+      <p>Swiftel Fibre WiFi Packages</p>
+      <div class="package-container">
+       <div class="package-card">
+  <img src="5mbps.jpg" alt="5Mbps" />
+  <a href="contact.html#contact-form" class="buy-button">Buy Now</a>
+</div>
 
-    <div class="package-card">
-      <img src="33mbps.jpg" alt="33Mbps Package">
-      <button class="buy-4">Buy Now</button>
-    </div>
+<div class="package-card">
+  <img src="13mbps.jpg" alt="13Mbps" />
+  <a href="contact.html#contact-form" class="buy-button">Buy Now</a>
+</div>
 
-    <section id="business Packages">
-  <h2>Business  WiFi Packages</h2>
-  <p>swiftel fibre wifi-packages</p>
-  <div class="package-container">
-    
-    <div class="package-card">
-      <img src="5mbps.jpg" alt="5Mbps Package">
-      <button class="buy-1">Buy Now</button>
-    </div>
+<div class="package-card">
+  <img src="23mbps.jpg" alt="23Mbps" />
+  <a href="contact.html#contact-form" class="buy-button">Buy Now</a>
+</div>
 
-    <div class="package-card">
-      <img src="13mbps.jpg" alt="13Mbps Package">
-      <button class="buy-2">Buy Now</button>
-    </div>
+<div class="package-card">
+  <img src="33mbps.jpg" alt="33Mbps" />
+  <a href="contact.html#contact-form" class="buy-button">Buy Now</a>
+</div>
 
-    <div class="package-card">
-      <img src="23mbps.jpg" alt="23Mbps Package">
-      <button class="buy-3">Buy Now</button>
-    </div>
+      </div>
+    </section>
 
-    <div class="package-card">
-      <img src="33mbps.jpg" alt="33Mbps Package">
-      <button class="buy-4">Buy Now</button>
-    </div>
-     
+    <section id="business-packages">
+      <h2>Business WiFi Packages</h2>
+      <p>Swiftel Fibre WiFi Packages</p>
+      <div class="package-container">
+        <div class="package-card"><img src="5mbps.jpg" alt="5Mbps" /><button class="buy-1">Buy Now</button></div>
+        <div class="package-card"><img src="13mbps.jpg" alt="13Mbps" /><button class="buy-2">Buy Now</button></div>
+        <div class="package-card"><img src="23mbps.jpg" alt="23Mbps" /><button class="buy-3">Buy Now</button></div>
+        <div class="package-card"><img src="33mbps.jpg" alt="33Mbps" /><button class="buy-4">Buy Now</button></div>
+      </div>
+    </section>
 
     <div class="banner-container">
-    <img src="banner.png" alt="Support Banner" class="banner-img" />
-
-    <!-- Overlay Social Media Icons -->
-    <div class="social-overlay">
-      <a href="https://wa.me/254111250055" target="_blank">
-        <img src="whatapp.webp" alt="WhatsApp" />
-      </a>
-      <a href="tel:+254790417880">
-        <img src="phone.png" alt="Contact Us" />
-      </a>
-      <a href="shop.html">
-        <img src="shop.png" alt="Shop" />
-      
-    
-      </a>
-      <a href="https://www.facebook.com/Geoffreynganga.co.ke/" target="_blank">
-        <img src="facebook.png" alt="Facebook" />
-      </a>
-    </div>
-  </div>
-
-</body>
-    <div class="contact-right">
-      <img src="agent.png" alt="Support Agent" />
-    </div>
-  </div>
-     </section>
-     <section id="banner2">
-      <h4>welcame to swiftel fibre</h4>
-      <h2>We believe that everyone, no matter where they are, should have access to a quality broadband Internet </h2>
-      <button class="normal">visitour online store</button>
-
-     </section>
-
-      <footer class="section-p1">
-        <div class="col">
-          <img src="logo.png" alt="">
-          <h4>contact</h4>
-          <p> <strong><address></address></strong> 00100 kasarani claysity</p>
-          <p><strong>phone:</strong>0111250055</p>
-          <p><strong>Hours:</strong>8:00-6:30pm</p>
-          <div class="follow">
-            <h4>follow us</h4>
-            <div class="Icons">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <h4>About</h4>
-          <a href="#"> About us</a>
-          <a href="#"> terms & conditions</a>
-          <a href="#"> privacy policy</a>
-          <a href="#"> contact us</a>
-          
-        </div>
-        <div class="col">
-          <h4>swiftel packages</h4>
-          <a href="#"> How to pay</a>
-          <a href="#"> fibre packages</a>
-          <a href="#"> wifi guide</a>
-          <a href="#"> data protection</a>
-          </div>
-      </footer>
-    </section>
+      <img src="banner.png" alt="Support Banner" class="banner-img" />
+      <div class="social-overlay">
+        <a href="https://wa.me/254111250055" target="_blank"><img src="whatapp.webp" alt="WhatsApp" /></a>
+        <a href="tel:+254790417880"><img src="phone.png" alt="Contact" /></a>
+        <a href="#" onclick="loadPage('shop')"><img src="shop.png" alt="Shop" /></a>
+        <a href="https://www.facebook.com/Geoffreynganga.co.ke/" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
       </div>
+    </div>
 
-  <script src="script.js"></script>
+    <section id="banner2">
+      <h4>Welcome to Swiftel Fibre</h4>
+      <h2>We believe that everyone, no matter where they are, should have access to a quality broadband Internet</h2>
+      <button class="normal">Visit our online store</button>
+    </section>
+  </div>
 
+  <!-- Dynamic Page Content -->
+  <div id="main-content" style="display: none;"></div>
+
+  <!-- Footer -->
+  <footer class="section-p1">
+    <div class="col">
+      <img src="logo.png" alt="" />
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> 00100 Kasarani Claysity</p>
+      <p><strong>Phone:</strong> 0111250055</p>
+      <p><strong>Hours:</strong> 8:00 - 6:30pm</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        <div class="Icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact us</a>
+    </div>
+
+    <div class="col">
+      <h4>Swiftel Packages</h4>
+      <a href="#">How to Pay</a>
+      <a href="#">Fibre Packages</a>
+      <a href="#">WiFi Guide</a>
+      <a href="#">Data Protection</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript for loading pages -->
+  <script>
+    function loadPage(page) {
+      if (page === "home") {
+        document.getElementById("main-content").style.display = "none";
+        document.getElementById("home-content").style.display = "block";
+        setActiveLink("home");
+        return;
+      }
+
+      fetch(`${page}.html`)
+        .then((response) => {
+          if (!response.ok) throw new Error("Page not found");
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("home-content").style.display = "none";
+          document.getElementById("main-content").innerHTML = html;
+          document.getElementById("main-content").style.display = "block";
+          setActiveLink(page);
+        })
+        .catch((err) => {
+          document.getElementById("main-content").innerHTML = "<h1>Page not found</h1>";
+        });
+    }
+
+    function setActiveLink(activePage) {
+      document.querySelectorAll("#navbar a").forEach((link) => {
+        link.classList.remove("active");
+        if (link.innerText.toLowerCase() === activePage) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    // Load home page content on first load
+    window.onload = () => loadPage("home");
+  </script>
 </body>
+
 </html>
+
