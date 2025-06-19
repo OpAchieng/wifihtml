@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+  <script src="script.js"></script>
+
+
+  <!-- Banner Image -->
+  <img src="banner3.png" alt="Contact Banner" class="contact-banner">
+
+  <!-- Content Section -->
+  <div class="contact-container">
+    <!-- Left Side (optional text or leave blank) -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>We're happy to answer any questions you may have. Just fill out the form and we’ll respond shortly.</p>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xqablynb" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+
+        <label for="region">Region</label>
+        <input type="text" name="region">
+
+        <label for="message">Comment</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
