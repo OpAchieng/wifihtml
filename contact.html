@@ -1,38 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Banner Image -->
-  <img src="banner3.png" alt="Contact Banner" class="contact-banner">
-
-  <!-- Content Section -->
-  <div class="contact-container">
-    <!-- Left Side (optional text or leave blank) -->
+  <div class="contact-wrapper">
+    <!-- LEFT: Info -->
     <div class="contact-info">
-      <h2>Get in Touch</h2>
-      <p>We're happy to answer any questions you may have. Just fill out the form and we’ll respond shortly.</p>
+      <h2><Swiftel class="fibre"></Swiftel>  SWIFTEL.FIBRE is here to help</h2>
+      <p><strong>Call us</strong><br>24 hours, 7 days a week<br>Dial 0111250055</p>
+      <p><strong>Email Us</strong><br>Write an email to us<br>swiftytelk@gmail.com.co</p>
+      <p><strong>Our Office</strong><br>clay city, mwiki kasarani, Nairobi, 00100</p>
     </div>
 
-    <!-- Right Side: Contact Form -->
+    <!-- MIDDLE: WhatsApp Section -->
+    <div class="whatsapp-section">
+      <h2>Chat with us 24/7 on WhatsApp</h2>
+      <p>Our technicians is here to support you.<br>WhatsApp us at 0111 250055</p>
+      <div class="whatsapp-icon">
+        <img src="whatapp.webp" alt="WhatsApp Icon" />
+      </div>
+      <div class="facebook-image">
+        <img src="personal.png" alt="facebook" />
+      </div>
+      <a href="https://wa.me/254111250055" class="chat-now-btn">Chat Now</a>
+    </div>
+
+    <!-- RIGHT: Form -->
     <div class="contact-form">
-      <form action="https://formspree.io/f/xqablynb" method="POST">
-        <label for="name">Name</label>
+      <h2>Get in touch</h2>
+      <form action="https://formspree.io/f/manjbloy" method="POST">
+        <label for="name">First Name</label>
         <input type="text" name="name" required>
+
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" name="phone">
 
         <label for="email">Email</label>
         <input type="email" name="email" required>
 
-        <label for="region">Region</label>
-        <input type="text" name="region">
+        <label>Select Subject</label><br>
+        <input type="radio" name="subject" value="hotspot" checked> hotspot
+        <input type="radio" name="subject" value="Home Internet"> Home Internet
+        <input type="radio" name="subject" value="Business Internet"> Business Internet
 
-        <label for="message">Comment</label>
-        <textarea name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea name="message" rows="4" required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   </div>

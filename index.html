@@ -64,10 +64,10 @@
       <h2>Business WiFi Packages</h2>
       <p>Swiftel Fibre WiFi Packages</p>
       <div class="package-container">
-        <div class="package-card"><img src="5mbps.jpg" alt="5Mbps" /><button class="buy-1">Buy Now</button></div>
-        <div class="package-card"><img src="13mbps.jpg" alt="13Mbps" /><button class="buy-2">Buy Now</button></div>
-        <div class="package-card"><img src="23mbps.jpg" alt="23Mbps" /><button class="buy-3">Buy Now</button></div>
-        <div class="package-card"><img src="33mbps.jpg" alt="33Mbps" /><button class="buy-4">Buy Now</button></div>
+        <div class="package-card"><img src="b23.png" alt="b23mbps" /><button class="buy-1">Buy Now</button></div>
+        <div class="package-card"><img src="b33.png" alt="13Mbps" /><button class="buy-2">Buy Now</button></div>
+        <div class="package-card"><img src="b43.png" alt="23Mbps" /><button class="buy-3">Buy Now</button></div>
+        <div class="package-card"><img src="b63.png" alt="33Mbps" /><button class="buy-4">Buy Now</button></div>
       </div>
     </section>
 
@@ -126,46 +126,52 @@
       <a href="#">Data Protection</a>
     </div>
   </footer>
-
-  <!-- JavaScript for loading pages -->
-  <script>
-    function loadPage(page) {
-      if (page === "home") {
-        document.getElementById("main-content").style.display = "none";
-        document.getElementById("home-content").style.display = "block";
-        setActiveLink("home");
-        return;
-      }
-
-      fetch(`${page}.html`)
-        .then((response) => {
-          if (!response.ok) throw new Error("Page not found");
-          return response.text();
-        })
-        .then((html) => {
-          document.getElementById("home-content").style.display = "none";
-          document.getElementById("main-content").innerHTML = html;
-          document.getElementById("main-content").style.display = "block";
-          setActiveLink(page);
-        })
-        .catch((err) => {
-          document.getElementById("main-content").innerHTML = "<h1>Page not found</h1>";
-        });
+<!-- JavaScript for loading pages -->
+<script>
+  function loadPage(page) {
+    if (page === "home") {
+      document.getElementById("main-content").style.display = "none";
+      document.getElementById("home-content").style.display = "block";
+      setActiveLink("home");
+      return;
     }
 
-    function setActiveLink(activePage) {
-      document.querySelectorAll("#navbar a").forEach((link) => {
-        link.classList.remove("active");
-        if (link.innerText.toLowerCase() === activePage) {
-          link.classList.add("active");
+    fetch(`${page}.html`)
+      .then((response) => {
+        if (!response.ok) throw new Error("Page not found");
+        return response.text();
+      })
+      .then((html) => {
+        document.getElementById("home-content").style.display = "none";
+        document.getElementById("main-content").innerHTML = html;
+        document.getElementById("main-content").style.display = "block";
+        setActiveLink(page);
+
+        // ✅ Dynamically load slider.js if it's the about page
+        if (page === "about") {
+          const script = document.createElement("script");
+          script.src = "slider.js";
+          script.defer = true;
+          document.body.appendChild(script);
         }
+      })
+      .catch((err) => {
+        console.error(err);
+        document.getElementById("main-content").innerHTML = "<h1>Page not found</h1>";
       });
-    }
+  }
 
-    // Load home page content on first load
-    window.onload = () => loadPage("home");
-  </script>
+  function setActiveLink(activePage) {
+    document.querySelectorAll("#navbar a").forEach((link) => {
+      link.classList.remove("active");
+      if (link.innerText.toLowerCase() === activePage) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  // Load home page content on first load
+  window.onload = () => loadPage("home");
+</script>
 </body>
-
 </html>
-

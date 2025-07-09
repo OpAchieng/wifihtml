@@ -111,7 +111,7 @@ body{
 .package-container {
   display: flex;
   flex-wrap: wrap;           /* allows them to wrap on small screens */
-  justify-content: left;   /* center the cards */
+  justify-content: center;   /* center the cards */
   gap: 10px;                 /* space between cards */
   padding: 40px;
   background-color: #f0f0f0;
@@ -572,7 +572,7 @@ body {
 
 .blog-sidebar a {
   text-decoration: none;
-  color: #007bff;
+  color: #ffee00;
 }
 
 .blog-posts {
@@ -606,7 +606,7 @@ body {
   display: inline-block;
   margin-top: 10px;
   font-weight: bold;
-  color: #007bff;
+  color: #eeff00;
   text-decoration: none;
 }
 /* Company info section */
@@ -626,3 +626,227 @@ body {
   color: #444;
   line-height: 1.6;
 }
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+  padding: 40px;
+}
+
+.contact-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* LEFT: Info */
+.contact-info {
+  flex: 1;
+  background: #f1f9fe;
+  padding: 40px;
+}
+
+.contact-info h2 {
+  color: #0d66aa;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 20px 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* MIDDLE: WhatsApp Section */
+.whatsapp-section {
+  flex: 1;
+  background: #e6f8ee;
+  padding: 40px;
+  text-align: center;
+}
+
+.whatsapp-section h2 {
+  color: #00a884;
+  margin-bottom: 10px;
+}
+
+.whatsapp-section p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.whatsapp-icon img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.person-image img {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-now-btn {
+  display: inline-block;
+  background: #00a884;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* RIGHT: Form */
+.contact-form {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-form h2 {
+  color: #0d66aa;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  background: #00b2a9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background: #009892;
+}
+/* Reset body basics */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section container */
+.about-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+/* Content box */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background:  #f7f304;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Headings */
+.about-container h1 {
+  font-size: 32px;
+  color: #0d66aa;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  font-size: 28px;
+  color: #0d66aa;
+  margin: 20px 0 10px;
+}
+
+.about-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Lists */
+.about-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-container ul li {
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  text-align: left;
+}
+
+.about-container ul li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00b2a9;
+  font-weight: bold;
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+}
+
+/* Individual slides */
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Contact info (optional) */
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  color: #0d66aa;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+
+
+
+
+

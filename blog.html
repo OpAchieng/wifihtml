@@ -3,74 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog – Swiftel Fibre</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Swiftel Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f8fa;
+    }
+
+    h1 {
+      color: #5e0ca6;
+    }
+
+    .search-bar {
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .post-list {
+      margin-top: 20px;
+    }
+
+    .post-list li {
+      margin: 8px 0;
+      color: #ffd700;
+      list-style: none;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e9cc0e;
+      border-left: 5px solid rgb(56, 16, 235);
+      display: none;
+    }
+
+    .no-result {
+      margin-top: 20px;
+      color: red;
+      display: none;
+    }
+
+    a {
+      color: #007bff;
+    }
+  </style>
 </head>
 <body>
+  <a href="#"><strong>Swiftel Blog</strong></a>
+  <p>Latest news, tips, and updates from Swiftel Fibre</p>
 
-  <!-- Header -->
-  <section id="blog-header">
-    <h1>Swiftel Blog</h1>
-    <p>Latest news, tips, and updates from Swiftel Fibre</p>
-  </section>
-
-  <!-- Company Info -->
-  <section class="company-info">
-    <h2>About Swiftel Fibre</h2>
+  <div style="background-color: #eee; padding: 20px; border-radius: 8px;">
+    <h1>About Swiftel Fibre</h1>
     <p>
-      Swiftel Fibre is a trusted internet service provider committed to delivering high-speed,
-      reliable, and affordable internet to homes and businesses across Kenya. Whether you're streaming,
-      working remotely, or running a business, our fibre and wireless solutions ensure you stay connected
-      at all times.
+      Swiftel Fibre is a trusted internet service provider committed to delivering high-speed, reliable,
+      and affordable internet to homes and businesses across Kenya.
     </p>
     <p>
-      We pride ourselves on fast installations, responsive customer support, and flexible M-Pesa payment options.
-      Our goal is to make broadband accessible to everyone, no matter their location.
+      We pride ourselves on fast installations, responsive customer support,hotspot, and flexible M-Pesa payment
+      options.
     </p>
-  </section>
+  </div>
 
-  <!-- Blog layout -->
-  <section class="blog-layout">
-    <!-- Sidebar -->
-    <aside class="blog-sidebar">
-      <input type="text" placeholder="Search blog..." class="search-input" />
-      <h3>Recent Posts</h3>
-      <ul>
-        <li><a href="#">How to Boost WiFi Speed</a></li>
-        <li><a href="#">Fibre vs Wireless Internet</a></li>
-        <li><a href="#">How to Pay with M-Pesa</a></li>
-      </ul>
-    </aside>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search blog posts..." onkeyup="searchPosts()">
+  </div>
 
-    <!-- Blog Posts -->
-    <div class="blog-posts">
-      <div class="blog-post">
-        <img src="fibre-vs-wireless.jpg" alt="Fibre vs Wireless">
-        <h2>Fibre vs. Wireless – What's Right for You?</h2>
-        <p>Discover the difference between fibre and wireless connections for your home or office.</p>
-        <a href="#">Read More</a>
-      </div>
+  <!-- Blog posts -->
+  <div class="post-list">
+    <ul id="postList">
+      <li data-keywords="installation, request">
+        <strong>How to request for installation</strong>
+        <div class="result" id="install-info">
+          To request installation, please contact our customer care via 0111250055 or fill out the form on our <a href="contact.html">Contact Page</a>.
+        </div>
+      </li>
+      <li data-keywords="support, help">
+        <strong>How to request for support</strong>
+        <div class="result" id="support-info">
+          You can reach support through our 24/7 helpline or email us. Visit the <a href="contact.html">Contact Page</a> to open a ticket.
+        </div>
+      </li>
+      <li data-keywords="payment, pay, internet">
+        <strong>How to pay for internet</strong>
+        <div class="result" id="pay-info">
+          Pay easily via M-Pesa. Go to Lipa na M-Pesa → PayBill: 4082571 → Account: Your phone number. <a href="contact.html">Need help?</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-      <div class="blog-post">
-        <img src="mpesa-guide.jpg" alt="M-Pesa Payment">
-        <h2>Pay for Internet with M-Pesa</h2>
-        <p>Follow our easy step-by-step guide to pay your Swiftel internet bill via M-Pesa.</p>
-        <a href="#">Read More</a>
-      </div>
+  <!-- No match message -->
+  <div class="no-result" id="noMatch">
+    No matching article found. <a href="contact.html">Contact us</a> for help.
+  </div>
 
-      <div class="blog-post">
-        <img src="wifi-speed.jpg" alt="Speed Tips">
-        <h2>5 Tips to Boost Your WiFi Speed</h2>
-        <p>Having connection issues? Here are easy ways to speed up your internet today.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </section>
+  <script>
+    function searchPosts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const posts = document.querySelectorAll('#postList li');
+      let found = false;
 
-  <!-- Footer -->
-  <footer class="section-p1">
-    <!-- Your existing footer content -->
-  </footer>
+      posts.forEach(post => {
+        const keywords = post.getAttribute('data-keywords');
+        const text = post.innerText.toLowerCase();
+        const resultBox = post.querySelector('.result');
 
+        if (text.includes(input) || keywords.includes(input)) {
+          post.style.display = 'block';
+          resultBox.style.display = 'block';
+          found = true;
+        } else {
+          post.style.display = 'none';
+          resultBox.style.display = 'none';
+        }
+      });
+
+      document.getElementById('noMatch').style.display = found ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
+
